@@ -1,0 +1,22 @@
+{
+  "name": "drove-animated-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "eslint": "8.29.0",
+    "eslint-config-next": "13.0.6",
+    "framer-motion": "^7.6.19",
+    "hamburger-react": "^2.5.0",
+    "next": "13.0.6",
+    "react": "18.2.0",
+    "react-animated-cursor": "^2.5.2",
+    "react-dom": "18.2.0",
+    "recoil": "^0.7.6"
+  }
+}

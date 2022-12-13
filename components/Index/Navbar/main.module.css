@@ -1,0 +1,50 @@
+.main {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  z-index: 99;
+}
+
+.logo,
+.menu {
+  padding: 1em 2em;
+}
+
+.logo {
+  font-family: "Daikon SemiBold";
+  font-size: 1.5em;
+
+  margin-right: auto;
+}
+
+.menu {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  font-family: "URW Geometric SemiBold";
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.menu_text {
+  position: relative;
+  width: 40px;
+  height: 100%;
+}
+
+.menu_text div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu_text span {
+  position: relative;
+}

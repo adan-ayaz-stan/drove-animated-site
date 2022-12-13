@@ -1,0 +1,57 @@
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+}
+
+.light,
+.dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+}
+
+.light {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  z-index: 10;
+}
+.dark {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  z-index: 5;
+}
+
+.light_left,
+.light_right {
+  position: relative;
+  background-color: #4d4d4dde;
+  z-index: 20;
+}
+
+.dark_left,
+.dark_right {
+  position: relative;
+  background-color: #111111;
+  z-index: 10;
+}
+
+.light_left,
+.dark_left {
+  left: -100%;
+}
+
+.light_right,
+.dark_right {
+  left: 100%;
+}
