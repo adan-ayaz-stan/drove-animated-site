@@ -15,10 +15,13 @@ export default function Navbar() {
     <motion.div
       className={styles.main}
       animate={{
-        color: menuToggled ? "white" : "black",
+        color: menuToggled ? "#fff" : "#000",
+        transition: {
+          duration: 0.7,
+        },
       }}
     >
-      <div className={`${styles.logo} link`}>Drove</div>
+      <div className={`${styles.logo} link`}>DROVE</div>
       <div
         className={`${styles.menu} link`}
         onMouseEnter={() => setHovered(true)}
@@ -65,7 +68,7 @@ export default function Navbar() {
                 },
               }}
             >
-              Open
+              {menuToggled ? "Close" : "Open"}
             </motion.span>
           </div>
         </div>

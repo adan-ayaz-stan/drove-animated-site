@@ -24,6 +24,9 @@ a {
 * {
   box-sizing: border-box;
 }
+.active-thumb {
+  left: 0px;
+}
 /* 
 @media (prefers-color-scheme: dark) {
   html {
