@@ -9,7 +9,7 @@
 .slider {
   height: 100%;
 
-  margin-left: 20%;
+  margin-left: 15%;
 
   background-color: white;
   border: solid 1px black;
@@ -20,6 +20,73 @@
 }
 .slide img {
   object-fit: cover;
+}
+
+.slide_content_wrapper {
+  max-width: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0%;
+
+  transform: translate(0, -50%);
+}
+
+.slide_content {
+  position: relative;
+
+  height: fit-content;
+  width: fit-content;
+
+  color: white;
+}
+
+.slide_content__category {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 20px;
+
+  text-transform: uppercase;
+}
+.slide_content__category div {
+  height: 1px;
+  width: 100px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 58%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.slide_content h1 {
+  font-size: 3.5em;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+.slide_content p {
+  margin: 20px;
+  margin-left: 40px;
+  margin-bottom: 50px;
+}
+
+.slide_content a {
+  width: fit-content;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+
+  margin: 50px;
+  padding: 10px 20px;
+
+  text-transform: uppercase;
+
+  border: solid 1px #fff;
+  border-radius: 44px;
 }
 
 .current_slide_and_thumb_slider {
@@ -33,15 +100,20 @@
   min-height: 100px;
   width: 100%;
 
-  transform: translate(0, -50%);
   border: solid 1px black;
 
   z-index: 10;
 }
 
 .thumb_slider_container {
-  height: 300px;
-  width: 200px;
+  height: 250px;
+  width: 150px;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translate(0, -50%);
 
   background-color: transparent;
 }
@@ -49,6 +121,8 @@
 .thumb_slider {
   height: 100%;
   width: 100%;
+
+  padding: 5px 0;
 
   background-color: transparent;
 }
@@ -72,9 +146,9 @@
 }
 
 .navigation {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
   gap: 10px;
 
   position: absolute;
@@ -86,6 +160,9 @@
 
 .nav_prev,
 .nav_next {
+  position: relative;
+  left: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,3 +176,4 @@
   border: solid 1px white;
   border-radius: 999px;
 }
+

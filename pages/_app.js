@@ -6,7 +6,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <style>
           {`
             .splash-screen {
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
               grid-template-rows: 1fr 1fr;
               grid-template-columns: 1fr;
 
-              position: absolute;
+              position: fixed;
               top: 0;
               left: 0;
 
@@ -22,7 +22,6 @@ function MyApp({ Component, pageProps }) {
               height: 100%;
               
               overflow: hidden;
-              z-index: -100;
             }
             .splash-screen div {
               position: relative;
@@ -62,11 +61,11 @@ function MyApp({ Component, pageProps }) {
         <div id="splash-screen-bottom">
           <h1 id="splash-screen-bottom-h1">Loading</h1>
         </div>
-      </div>
+      </div> */}
       <RecoilRoot>
         <Component {...pageProps} />
       </RecoilRoot>
-      <Script strategy="beforeInteractive">{`
+      {/* <Script strategy="beforeInteractive">{`
         document.onreadystatechange = function() {
           if (document.readyState == 'complete') {
             setTimeout(() => {
@@ -83,7 +82,7 @@ function MyApp({ Component, pageProps }) {
             }, 1000);
           }
         }
-        `}</Script>
+        `}</Script> */}
     </>
   );
 }

@@ -1,0 +1,35 @@
+.socials_container {
+  height: 30px;
+  width: 50px;
+
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+
+  color: white;
+
+  overflow: hidden;
+  z-index: 5;
+}
+
+.wrapper_div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.socials_container .hr {
+  height: 1px;
+  width: 50px;
+  background-color: white;
+}
+
+.socials_container a {
+  margin: 0 10px;
+  font-size: 1.5em;
+}

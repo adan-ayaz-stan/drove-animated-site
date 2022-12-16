@@ -3,11 +3,18 @@ import dynamic from "next/dynamic";
 import Navbar from "../components/Index/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 import Curtains from "../components/Layout/Curtains/Curtains";
+import ImageSlider from "../components/Index/ImageSlider/ImageSlider";
 
 const AnimCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
 
+const ImgSlider = dynamic(
+  () => import("../components/Index/ImageSlider/ImageSlider"),
+  {
+    ssr: false,
+  }
+);
 export default function Home() {
   return (
     <>
@@ -31,7 +38,6 @@ export default function Home() {
             backdropFilter: "invert(1)",
           }}
           clickables={[
-            "a",
             'input[type="text"]',
             'input[type="email"]',
             'input[type="number"]',
@@ -49,6 +55,7 @@ export default function Home() {
         <Curtains />
 
         <Navbar />
+        <ImgSlider />
       </div>
     </>
   );
