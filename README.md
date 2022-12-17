@@ -1,3 +1,5 @@
+## This is an animation site. I have used Framer Motion for animations ( most of them ), some Vanilla JS where React breaks the animations, Recoil for some global state for example the menutoggle of in the top right.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
