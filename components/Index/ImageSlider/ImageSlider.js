@@ -56,17 +56,6 @@ const thumbArray = [
 export default function ImageSlider() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const variants = {
-    visible: (ind) => ({
-      left: "0px",
-      opacity: 1,
-      transition: {
-        delay: ind * 0.1 + 0.7,
-      },
-    }),
-    hidden: { opacity: 0, left: "-50px" },
-  };
-
   return (
     <div className={styles.main}>
       <div style={{ position: "absolute", top: "0", left: "0", width: "100%" }}>
@@ -139,14 +128,19 @@ export default function ImageSlider() {
                     {strArray.map((ele, i) => {
                       return (
                         <motion.span
-                          custom={i}
                           style={{
                             position: "relative",
-                            transition: "all ease .1s",
                           }}
-                          variants={variants}
-                          initial={"hidden"}
-                          whileInView={"visible"}
+                          initial={{ opacity: 0, left: "-20px" }}
+                          whileInView={{
+                            opacity: 1,
+                            left: "0px",
+                            transition: {
+                              delay: 0.1 * i + 0.5,
+                              type: "spring",
+                              duration: 0.7,
+                            },
+                          }}
                           key={i * Math.random() * 2.54}
                         >
                           {ele}
