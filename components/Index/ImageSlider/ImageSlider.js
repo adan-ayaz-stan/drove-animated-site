@@ -141,7 +141,7 @@ export default function ImageSlider() {
                       return (
                         <motion.span
                           custom={i}
-                          style={{ position: "relative" }}
+                          style={{ position: "relative", opacity: "0" }}
                           variants={variants}
                           initial={"hidden"}
                           whileInView={"visible"}
