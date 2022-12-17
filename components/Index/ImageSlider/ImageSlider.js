@@ -59,10 +59,9 @@ export default function ImageSlider() {
   const variants = {
     visible: (ind) => ({
       left: "0px",
-      opacity: [0, 1],
+      opacity: 1,
       transition: {
         delay: ind * 0.1 + 0.7,
-        times: [0.1, 1],
       },
     }),
     hidden: { opacity: 0, left: "-50px" },
@@ -141,7 +140,10 @@ export default function ImageSlider() {
                       return (
                         <motion.span
                           custom={i}
-                          style={{ position: "relative", opacity: "0" }}
+                          style={{
+                            position: "relative",
+                            transition: "all ease .1s",
+                          }}
                           variants={variants}
                           initial={"hidden"}
                           whileInView={"visible"}
