@@ -50,9 +50,9 @@ export default function SecondScreen() {
             />
             <motion.span
               style={{ color: "#aeaeae" }}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: "0" }}
               animate={{
-                opacity: isDesignerHovered ? 1 : 0,
+                opacity: isDesignerHovered ? "1" : "0",
                 transition: {
                   delay: isDesignerHovered ? 0.7 : 0,
                   duration: 0.4,
