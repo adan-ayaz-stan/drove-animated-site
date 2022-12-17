@@ -27,17 +27,21 @@ export default function Home() {
 
         {/* Animated Cursor */}
         <AnimCursor
-          innerSize={1}
+          innerSize={6}
           outerSize={25}
           outerAlpha={0.2}
           innerScale={0.7}
           outerScale={4}
           trailingSpeed={15}
           hasBlendMode={true}
+          innerStyle={{
+            backgroundColor: "black",
+          }}
           outerStyle={{
             backdropFilter: "invert(1)",
           }}
           clickables={[
+            "a",
             'input[type="text"]',
             'input[type="email"]',
             'input[type="number"]',
@@ -54,7 +58,6 @@ export default function Home() {
         {/* Curtains */}
         <Curtains />
 
-        <Navbar />
         <ImgSlider />
       </div>
     </>

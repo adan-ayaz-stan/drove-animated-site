@@ -16,6 +16,7 @@ import { motion } from "framer-motion";
 
 import styles from "./main.module.css";
 import SocialsLink from "./miniComponents/SocialsLink";
+import Navbar from "../Navbar/Navbar";
 
 const sampleArray = [
   {
@@ -69,6 +70,9 @@ export default function ImageSlider() {
 
   return (
     <div className={styles.main}>
+      <div style={{ position: "absolute", top: "0", left: "0", width: "100%" }}>
+        <Navbar />
+      </div>
       <Swiper
         className={styles.slider}
         spaceBetween={0}
@@ -100,11 +104,21 @@ export default function ImageSlider() {
           },
         }}
       >
+        <h1
+          style={{
+            position: "absolute",
+            bottom: "20%",
+            right: "5%",
+            fontSize: "7em",
+            margin: "0",
+            zIndex: "10",
+          }}
+        >
+          
+        </h1>
         {sampleArray.map((ele, ind) => {
           const h1str = "Time Tag Watch";
           const strArray = h1str.split("");
-
-          console.log(strArray);
 
           return (
             <SwiperSlide
@@ -138,6 +152,7 @@ export default function ImageSlider() {
                           variants={variants}
                           initial={"hidden"}
                           whileInView={"visible"}
+                          key={i * Math.random() * 2.54}
                         >
                           {ele}
                         </motion.span>
@@ -191,7 +206,10 @@ export default function ImageSlider() {
         >
           {thumbArray.map((ele, ind) => {
             return (
-              <SwiperSlide className={styles.thumb_slide}>
+              <SwiperSlide
+                className={styles.thumb_slide}
+                key={ind * Math.random()}
+              >
                 <Image src={ele.img} alt="image" layout="fill" loading="lazy" />
                 <h3>{"0" + (+ind + 1)}</h3>
               </SwiperSlide>

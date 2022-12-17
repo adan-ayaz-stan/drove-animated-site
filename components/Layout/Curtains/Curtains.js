@@ -25,52 +25,46 @@ export default function Curtains() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.light}>
-        <motion.div
-          className={styles.light_left}
-          animate={{
-            left: isMenuToggledValue ? "0%" : "-100%",
-            transition: {
-              duration: 0.7,
-              type: "just",
-            },
-          }}
-        ></motion.div>
-        <motion.div
-          animate={{
-            left: isMenuToggledValue ? "0%" : "100%",
-            transition: {
-              duration: 0.7,
-              type: "just",
-            },
-          }}
-          className={styles.light_right}
-        ></motion.div>
-      </div>
-      <div className={styles.dark}>
-        <motion.div
-          animate={{
-            left: isMenuToggledValue ? "0%" : "-100%",
-            transition: {
-              duration: 1,
-              type: "just",
-              delay: 0.7,
-            },
-          }}
-          className={styles.dark_left}
-        ></motion.div>
-        <motion.div
-          animate={{
-            left: isMenuToggledValue ? "0%" : "100%",
-            transition: {
-              duration: 1,
-              type: "just",
-              delay: 0.7,
-            },
-          }}
-          className={styles.dark_right}
-        ></motion.div>
-      </div>
+      <motion.div
+        className={styles.lleft}
+        animate={{
+          left: isMenuToggledValue ? "0%" : "-50%",
+          transition: {
+            duration: 1,
+            delay: isMenuToggledValue ? 0 : 1,
+          },
+        }}
+      ></motion.div>
+      <motion.div
+        className={styles.dleft}
+        animate={{
+          left: isMenuToggledValue ? "0%" : "-50%",
+          transition: {
+            duration: 1,
+            delay: isMenuToggledValue ? 1 : 0,
+          },
+        }}
+      ></motion.div>
+      <motion.div
+        className={styles.lright}
+        animate={{
+          left: isMenuToggledValue ? "50%" : "100%",
+          transition: {
+            duration: 1,
+            delay: isMenuToggledValue ? 0 : 1,
+          },
+        }}
+      ></motion.div>
+      <motion.div
+        className={styles.dright}
+        animate={{
+          left: isMenuToggledValue ? "50%" : "100%",
+          transition: {
+            duration: 1,
+            delay: isMenuToggledValue ? 1 : 0,
+          },
+        }}
+      ></motion.div>
     </div>
   );
 }
