@@ -1,0 +1,91 @@
+.main {
+  height: 100vh;
+  width: 100%;
+
+  background-color: rgb(17, 17, 17);
+
+  padding: 50px 0;
+}
+
+.heading {
+  margin: 0 auto;
+  padding: 10px 0;
+  color: white;
+  font-family: "URW Geometric SemiBold";
+  font-size: 3em;
+  text-align: center;
+}
+
+.container {
+  min-height: 80%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  color: white;
+}
+
+.text_content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 10px;
+
+  padding: 30px 20%;
+}
+
+.text_content p {
+  color: rgb(163, 163, 163);
+  font-size: 1.2em;
+  font-family: "Daikon Light";
+}
+
+.designer_name {
+  width: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+
+  text-align: left;
+  font-size: 1.2em;
+  font-family: "Daikon Medium";
+
+  padding: 10px 0;
+}
+
+.designer_name div {
+  height: 1px;
+  width: 100px;
+  background-color: white;
+}
+
+.experience {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin: 1em 0;
+
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-family: "Daikon Bold";
+}
+
+.image_content {
+  padding: 10%;
+  background-color: rgb(27, 27, 27);
+}
+
+.image_container {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+}
+
+.image_container img {
+  object-fit: cover;
+}

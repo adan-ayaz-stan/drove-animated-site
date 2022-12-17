@@ -1,6 +1,21 @@
 @font-face {
+  font-family: 'Daikon Bold';
+  src: url(../cms/fonts/Daikon/Daikon-Bold.ttf);
+}
+
+@font-face {
   font-family: "Daikon SemiBold";
   src: url(../cms/fonts/Daikon/Daikon-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Daikon Medium";
+  src: url(../cms/fonts/Daikon/Daikon-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Daikon Light';
+  src: url(../cms/fonts/Daikon/Daikon-Light.ttf);
 }
 
 @font-face {

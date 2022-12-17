@@ -4,6 +4,7 @@ import Navbar from "../components/Index/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 import Curtains from "../components/Layout/Curtains/Curtains";
 import ImageSlider from "../components/Index/ImageSlider/ImageSlider";
+import SecondScreen from "../components/Index/SecondScreen/SecondScreen";
 
 const AnimCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -59,6 +60,7 @@ export default function Home() {
         <Curtains />
 
         <ImgSlider />
+        <SecondScreen />
       </div>
     </>
   );
