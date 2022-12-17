@@ -80,6 +80,7 @@ export default function ImageSlider() {
         onSlideChange={(slide) => {
           console.log(slide);
           const index = slide.activeIndex;
+          document.getElementById("slide-number").innerText = "0" + (index + 1);
           thumbsSwiper.slideTo(index);
         }}
         slideToClickedSlide={true}
@@ -105,16 +106,10 @@ export default function ImageSlider() {
         }}
       >
         <h1
-          style={{
-            position: "absolute",
-            bottom: "20%",
-            right: "5%",
-            fontSize: "7em",
-            margin: "0",
-            zIndex: "10",
-          }}
+          id="slide-number"
+          className={styles.slide_number}
         >
-          
+          01
         </h1>
         {sampleArray.map((ele, ind) => {
           const h1str = "Time Tag Watch";

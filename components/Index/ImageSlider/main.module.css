@@ -88,6 +88,18 @@
   border-radius: 44px;
 }
 
+.slide_number {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  font-size: 9em;
+  font-family: "URW Geometric SemiBold";
+  margin: 0;
+  z-index: 10;
+  color: rgba(53, 53, 53, 0.37);
+  -webkit-text-stroke: rgb(31, 30, 30) 1px;
+}
+
 .current_slide_and_thumb_slider {
   display: flex;
   flex-flow: row nowrap;
