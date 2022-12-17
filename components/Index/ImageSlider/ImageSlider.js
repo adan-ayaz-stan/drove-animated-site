@@ -58,14 +58,13 @@ export default function ImageSlider() {
 
   const variants = {
     visible: (ind) => ({
-      position: "relative",
       left: "0px",
       opacity: 1,
       transition: {
         delay: ind * 0.1 + 0.7,
       },
     }),
-    hidden: { opacity: 0, left: "-50px", position: "relative" },
+    hidden: { opacity: 0, left: "-50px" },
   };
 
   return (
@@ -105,10 +104,7 @@ export default function ImageSlider() {
           },
         }}
       >
-        <h1
-          id="slide-number"
-          className={styles.slide_number}
-        >
+        <h1 id="slide-number" className={styles.slide_number}>
           01
         </h1>
         {sampleArray.map((ele, ind) => {
@@ -144,6 +140,7 @@ export default function ImageSlider() {
                       return (
                         <motion.span
                           custom={i}
+                          style={{ position: "relative" }}
                           variants={variants}
                           initial={"hidden"}
                           whileInView={"visible"}
