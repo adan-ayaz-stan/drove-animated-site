@@ -10,10 +10,12 @@ export default function SecondScreen() {
   return (
     <div className={styles.main}>
       <motion.h1
+        initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
           transition: {
             delay: 0.5,
+            duration: 0.4,
           },
         }}
         className={styles.heading}
