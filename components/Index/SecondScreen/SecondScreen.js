@@ -26,11 +26,23 @@ export default function SecondScreen() {
       <div className={styles.container}>
         <div className={styles.text_content}>
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit.
+            {`It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.`
+              .split(" ")
+              .map((ele, ind) => {
+                return (
+                  <motion.span
+                    initial={{ opacity: 0, top: "10px" }}
+                    whileInView={{
+                      opacity: 1,
+                      top: "0px",
+                      transition: {
+                        delay: ind * 0.03 + 0.8,
+                        duration: 0.1,
+                      },
+                    }}
+                  >{` ${ele}`}</motion.span>
+                );
+              })}
           </p>
 
           <div
@@ -65,15 +77,28 @@ export default function SecondScreen() {
 
           <div className={styles.experience}>
             <span style={{ fontSize: "5em" }}>25</span>{" "}
-            <span
+            <motion.span
               style={{
+                position: "relative",
                 marginTop: "35px",
                 width: "250px",
                 fontFamily: "Daikon Light",
               }}
+              initial={{
+                opacity: 0,
+                top: "10px",
+              }}
+              whileInView={{
+                opacity: 1,
+                top: "0px",
+                transition: {
+                  delay: 0.6,
+                  duration: 0.4,
+                },
+              }}
             >
               years of digital experience
-            </span>
+            </motion.span>
           </div>
         </div>
         <div className={styles.image_content}>

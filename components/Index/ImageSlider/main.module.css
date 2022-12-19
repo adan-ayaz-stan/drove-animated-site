@@ -14,6 +14,12 @@
   background-color: black;
 }
 
+@media only screen and (max-width: 1000px) {
+  .slider {
+    margin-left: 0%;
+  }
+}
+
 .slide {
   position: relative;
 }
@@ -29,6 +35,11 @@
   left: 0%;
 
   transform: translate(0, -50%);
+}
+@media only screen and (max-width: 1000px) {
+  .slide_content_wrapper {
+    max-width: 100%;
+  }
 }
 
 .slide_content {

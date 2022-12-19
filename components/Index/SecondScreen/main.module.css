@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100%;
 
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(5, 5, 5);
 
   padding: 50px 0;
 }
@@ -40,6 +40,9 @@
   color: rgb(163, 163, 163);
   font-size: 1.2em;
   font-family: "Daikon Light";
+}
+.text_content p span {
+  position: relative;
 }
 
 .designer_name {
