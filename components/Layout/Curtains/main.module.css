@@ -38,3 +38,43 @@
 .dright {
   background-color: #1e1e1e;
 }
+
+.dleft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  color: white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+  left: 0px;
+
+  font-family: "Daikon SemiBold";
+  font-size: 2.5em;
+
+  padding: 10px 0;
+}
+
+.dright {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.contact_info {
+  display: flex;
+  flex-flow: column;
+}
+.contact_info p {
+  color: aliceblue;
+  font-family: "Daikon Light Italic";
+  font-size: 1.3em;
+  margin: 0;
+}

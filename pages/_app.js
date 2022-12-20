@@ -67,6 +67,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </RecoilRoot>
       <Script strategy="beforeInteractive">{`
+        
         document.onreadystatechange = function() {
           if (document.readyState == 'complete') {
             setTimeout(() => {
@@ -85,6 +86,8 @@ function MyApp({ Component, pageProps }) {
             }, 1000);
           }
         }
+
+
         `}</Script>
     </>
   );

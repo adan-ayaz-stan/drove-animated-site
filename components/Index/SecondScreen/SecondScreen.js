@@ -2,10 +2,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import styles from "./main.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function SecondScreen() {
   const [isDesignerHovered, setDesignerHovered] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      document.getElementById("second-screen-image").style.backgroundSize =
+        88 + window.pageYOffset / 35 + "%";
+    });
+  }, []);
 
   return (
     <div className={styles.main}>
@@ -102,14 +109,26 @@ export default function SecondScreen() {
           </div>
         </div>
         <div className={styles.image_content}>
-          <div className={styles.image_container}>
-            <Image
+          <div
+            className={styles.image_container}
+            style={{
+              background:
+                'url("https://images.pexels.com/photos/1419923/pexels-photo-1419923.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1")',
+              backgroundPosition: "center",
+              backgroundSize: "100%",
+            }}
+            id="second-screen-image"
+            onScroll={(e) => {
+              e.target.style.backgroundSize = window.pageYOffset;
+            }}
+          >
+            {/* <Image
               src={
                 "https://images.pexels.com/photos/1419923/pexels-photo-1419923.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1"
               }
               alt="table-top-image"
               layout="fill"
-            />
+            /> */}
           </div>
         </div>
       </div>

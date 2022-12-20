@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCreative, Navigation } from "swiper";
@@ -105,7 +105,13 @@ export default function ImageSlider() {
               className={styles.slide}
               key={ind * Math.random() + 152}
             >
-              <Image src={ele.img} alt="image" layout="fill" loading="lazy" />
+              <Image
+                src={ele.img}
+                alt="image"
+                layout="fill"
+                loading="lazy"
+                className="slider-image"
+              />
               <div className={styles.slide_content_wrapper}>
                 <div className={styles.slide_content}>
                   <div className={styles.slide_content__category}>
