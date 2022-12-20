@@ -1,4 +1,56 @@
 .main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
   height: 100vh;
   width: 100%;
+
+  color: white;
+  background-color: black;
+}
+
+.small_heading {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-family: "Daikon Medium";
+}
+
+.large_heading {
+  font-family: "Daikon Bold";
+  font-size: 2em;
+}
+
+.cards_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 30px;
+
+  padding: 10px 50px;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 50px 20px;
+}
+
+.card_image {
+  position: relative;
+
+  height: 100px;
+  width: 100px;
+}
+
+.card_image path {
+  fill: white;
+  stroke: white;
 }
