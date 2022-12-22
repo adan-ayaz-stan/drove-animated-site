@@ -25,6 +25,7 @@ export default function SecondScreen() {
             duration: 0.4,
           },
         }}
+        viewport={{ once: true }}
         className={styles.heading}
       >
         Hello, we are Drove Drive
@@ -47,6 +48,7 @@ export default function SecondScreen() {
                         duration: 0.1,
                       },
                     }}
+                    viewport={{ once: true }}
                   >{` ${ele}`}</motion.span>
                 );
               })}
@@ -83,7 +85,24 @@ export default function SecondScreen() {
           </div>
 
           <div className={styles.experience}>
-            <span style={{ fontSize: "5em" }}>25</span>{" "}
+            <motion.span
+              style={{ fontSize: "5em", position: "relative" }}
+              initial={{
+                opacity: 0,
+                top: "10px",
+              }}
+              whileInView={{
+                opacity: 1,
+                top: "0px",
+                transition: {
+                  delay: 0.3,
+                  duration: 0.4,
+                },
+              }}
+              viewport={{ once: true }}
+            >
+              25
+            </motion.span>{" "}
             <motion.span
               style={{
                 position: "relative",
@@ -103,6 +122,7 @@ export default function SecondScreen() {
                   duration: 0.4,
                 },
               }}
+              viewport={{ once: true }}
             >
               years of digital experience
             </motion.span>
@@ -118,9 +138,6 @@ export default function SecondScreen() {
               backgroundSize: "100%",
             }}
             id="second-screen-image"
-            onScroll={(e) => {
-              e.target.style.backgroundSize = window.pageYOffset;
-            }}
           >
             {/* <Image
               src={

@@ -146,7 +146,7 @@ export default function ImageSlider() {
                               type: "spring",
                               duration: 0.7,
                             },
-                          }}
+                          }}viewport={{ once: true }}
                           key={i * Math.random() * 2.54}
                         >
                           {ele}

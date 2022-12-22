@@ -1,0 +1,77 @@
+.main {
+  position: relative;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-flow: row-reverse;
+
+  overflow: hidden;
+
+  background-color: black;
+
+  padding: 0 10%;
+
+  z-index: -10;
+}
+
+.bg {
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+  top: 0%;
+  left: 0%;
+
+  transform-origin: center;
+
+  pointer-events: none;
+
+  z-index: -5;
+}
+
+.banner {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  max-width: 50%;
+  height: 100%;
+  padding: 0 50px;
+
+  color: white;
+  background-color: rgba(24, 24, 24, 0.699);
+
+  z-index: 5;
+}
+
+.banner h2 {
+  margin: 0;
+  font-size: 2em;
+  font-family: "URW Geometric SemiBold";
+}
+.banner p {
+  margin: 30px;
+  font-family: "Daikon Medium";
+}
+.banner a {
+  width: fit-content;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Daikon Bold";
+  letter-spacing: 3px;
+
+  border: solid 1px #fff;
+  border-radius: 44px;
+}

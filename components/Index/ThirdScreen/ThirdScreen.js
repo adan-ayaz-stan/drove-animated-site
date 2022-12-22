@@ -1,9 +1,11 @@
+import Image from "next/image";
+import { motion } from "framer-motion";
+
 import styles from "./main.module.css";
 
 import bulbSvg from "../../../cms/svgs/bulb.svg";
 import vectorSvg from "../../../cms/svgs/vector.svg";
 import stackSvg from "../../../cms/svgs/stack.svg";
-import Image from "next/image";
 
 export default function ThirdScreen() {
   const sampleArray = [
@@ -29,16 +31,33 @@ export default function ThirdScreen() {
 
   return (
     <div className={styles.main}>
-      <h4 className={styles.small_heading}>
-        {"•"}
-        <div
-          style={{ height: "1px", width: "100px", backgroundColor: "black" }}
-        />
-        Our Services
-      </h4>
+      <motion.div
+        style={{ position: "relative" }}
+        initial={{ opacity: 0, top: "40px" }}
+        whileInView={{
+          opacity: 1,
+          top: "0px",
+          transition: {
+            delay: 0.7,
+            duration: 0.7,
+            ease: "easeOut",
+          },
+        }}viewport={{ once: true }}
+      >
+        <h4 className={styles.small_heading}>
+          {"•"}
+          <div
+            style={{
+              height: "1px",
+              width: "100px",
+              backgroundColor: "#ffffff",
+            }}
+          />
+          Our Services
+        </h4>
 
-      <h1 className={styles.large_heading}>New Branding Agency</h1>
-
+        <h1 className={styles.large_heading}>New Branding Agency</h1>
+      </motion.div>
       <div className={styles.cards_container}>
         {sampleArray.map((ele, ind) => {
           return (

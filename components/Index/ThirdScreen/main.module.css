@@ -8,17 +8,22 @@
 
   color: white;
   background-color: black;
+
+  padding: 0 10%;
 }
 
 .small_heading {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 
+  font-size: 1em;
   font-family: "Daikon Medium";
 }
 
 .large_heading {
+  margin: 1em 0;
+  margin-top: 10px;
   font-family: "Daikon Bold";
   font-size: 2em;
 }
@@ -53,4 +58,8 @@
 .card_image path {
   fill: white;
   stroke: white;
+}
+
+.card h2 {
+  text-transform: uppercase;
 }
