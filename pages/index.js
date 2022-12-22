@@ -6,6 +6,8 @@ import Curtains from "../components/Layout/Curtains/Curtains";
 import ImageSlider from "../components/Index/ImageSlider/ImageSlider";
 import SecondScreen from "../components/Index/SecondScreen/SecondScreen";
 import ThirdScreen from "../components/Index/ThirdScreen/ThirdScreen";
+import FourthScreen from "../components/Index/FourthScreen/FourthScreen";
+import FifthScreen from "../components/Index/FifthScreen/FifthScreen";
 
 const AnimCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -63,6 +65,8 @@ export default function Home() {
         <ImgSlider />
         <SecondScreen />
         <ThirdScreen />
+        <FourthScreen />
+        <FifthScreen />
       </div>
     </>
   );

@@ -7,7 +7,35 @@ import "swiper/css/pagination";
 
 import styles from "./main.module.css";
 
-const sampleData = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
+const sampleData = [
+  {
+    img: "https://images.pexels.com/photos/14535943/pexels-photo-14535943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    img: "https://images.pexels.com/photos/789555/pexels-photo-789555.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+  },
+  {
+    img: "https://images.pexels.com/photos/6152103/pexels-photo-6152103.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+  },
+  {
+    img: "https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+  },
+  {
+    img: "https://images.pexels.com/photos/426976/pexels-photo-426976.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+  },
+  {
+    img: "https://images.pexels.com/photos/57901/pexels-photo-57901.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+  },
+  {
+    img: "https://images.pexels.com/photos/3750717/pexels-photo-3750717.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+  },
+  {
+    img: "https://images.pexels.com/photos/2118483/pexels-photo-2118483.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+  },
+  {
+    img: "https://images.pexels.com/photos/1874675/pexels-photo-1874675.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+  },
+];
 
 export default function FifthScreen() {
   const container = {
@@ -42,7 +70,23 @@ export default function FifthScreen() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.headings}>
+      <motion.div
+        className={styles.headings}
+        initial={{
+          top: "50px",
+          opacity: 0,
+        }}
+        whileInView={{
+          top: "0px",
+          opacity: 1,
+          transition: {
+            delay: 0.7,
+            duration: 0.7,
+            ease: "easeOut",
+          },
+        }}
+        viewport={{ once: true }}
+      >
         <div className={styles.small_heading}>
           •
           <div
@@ -52,10 +96,10 @@ export default function FifthScreen() {
         </div>
 
         <h2 className={styles.large_heading}>Creative Portfolio Designs</h2>
-      </div>
+      </motion.div>
 
       <Swiper
-        spaceBetween={50}
+        spaceBetween={100}
         slidesPerView={3}
         className={styles.slider}
         onSlideChange={() => console.log("slide change")}
@@ -68,6 +112,8 @@ export default function FifthScreen() {
           bulletClass: styles.bullet,
           bulletActiveClass: styles.bullet_active,
         }}
+        loop={true}
+        initialSlide={3}
       >
         {sampleData.map((ele, ind) => {
           return (
@@ -77,13 +123,7 @@ export default function FifthScreen() {
                 initial={"normal"}
                 whileHover={"hover"}
               >
-                <Image
-                  src={
-                    "https://images.pexels.com/photos/2363823/pexels-photo-2363823.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1"
-                  }
-                  alt="background-slide"
-                  layout="fill"
-                />
+                <Image src={ele.img} alt="background-slide" layout="fill" />
 
                 <h3>Photography</h3>
                 <h1>Bastion Bux</h1>

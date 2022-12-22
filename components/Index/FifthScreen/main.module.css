@@ -17,7 +17,7 @@
   gap: 10px;
 
   font-family: "Daikon Medium";
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .large_heading {
@@ -27,6 +27,7 @@
 }
 
 .headings {
+  position: relative;
   margin-left: 10%;
   margin-bottom: 25px;
 }

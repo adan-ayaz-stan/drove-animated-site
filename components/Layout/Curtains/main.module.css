@@ -13,7 +13,7 @@
 .dleft {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -50%;
 
   height: 100vh;
   width: 50vw;
@@ -23,7 +23,7 @@
 .dright {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 100%;
 
   height: 100vh;
   width: 50vw;
@@ -31,12 +31,12 @@
 
 .lleft,
 .lright {
-  background-color: #4d4d4da1;
+  background-color: #1f1f1fa1;
 }
 
 .dleft,
 .dright {
-  background-color: #1e1e1e;
+  background-color: #0c0c0c;
 }
 
 .dleft {

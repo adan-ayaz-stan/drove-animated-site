@@ -9,38 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <style>
           {`
-            .splash-screen {
-              display: grid;
-              grid-template-rows: 1fr 1fr;
-              grid-template-columns: 1fr;
-
-              position: fixed;
-              top: 0;
-              left: 0;
-
-              width: 100%;
-              height: 100%;
-              
-              overflow: hidden;
-              z-index: 1000;
-            }
-            .splash-screen div {
-              position: relative;
-              top: 0%;
-              display: flex;
-              justify-content: center;
-              background-color: #111;
-              transition: all ease-in 1s;
-              z-index: 100;
-            }
-            .splash-screen div:first-child {
-              align-items: flex-end;
-              z-index: 100;
-            }
-            .splash-screen div:last-child {
-              align-items: flex-start;
-              border-top: solid 1px black;
-            }
+            
             .splash-screen div h1 {
               position: relative;
               top: 0;
@@ -55,12 +24,81 @@ function MyApp({ Component, pageProps }) {
           `}
         </style>
       </Head>
-      <div className="splash-screen" id="splash-screen">
-        <div id="splash-screen-top">
-          <h1 id="splash-screen-top-h1">DROOV</h1>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateRows: "1fr 1fr",
+          gridTemplateColumns: "1fr",
+          position: "fixed",
+          top: "0",
+          left: "0",
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+          zIndex: 1000,
+        }}
+        id="splash-screen"
+      >
+        <div
+          id="splash-screen-top"
+          style={{
+            position: "relative",
+            top: "0%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-end",
+            borderBottom: "solid 1px black",
+            backgroundColor: "#111",
+            transition: "all ease-in 1s",
+            zIndex: 100,
+          }}
+        >
+          <h1
+            id="splash-screen-top-h1"
+            style={{
+              position: "relative",
+              top: "0",
+              margin: "0",
+              color: "#fff",
+              opacity: 1,
+              textTransform: "uppercase",
+              fontFamily: "'URW Geometric SemiBold'",
+              fontSize: "4em",
+              transition: "all ease-in 1s",
+            }}
+          >
+            DROOV
+          </h1>
         </div>
-        <div id="splash-screen-bottom">
-          <h1 id="splash-screen-bottom-h1">Loading</h1>
+        <div
+          id="splash-screen-bottom"
+          style={{
+            position: "relative",
+            top: "0%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            backgroundColor: "#111",
+            transition: "all ease-in 1s",
+            zIndex: 100,
+          }}
+        >
+          <h1
+            id="splash-screen-bottom-h1"
+            style={{
+              position: "relative",
+              top: "0",
+              margin: "0",
+              color: "#fff",
+              opacity: 1,
+              textTransform: "uppercase",
+              fontFamily: "'URW Geometric SemiBold'",
+              fontSize: "4em",
+              transition: "all ease-in 1s",
+            }}
+          >
+            Loading
+          </h1>
         </div>
       </div>
       <RecoilRoot>
@@ -87,6 +125,78 @@ function MyApp({ Component, pageProps }) {
           }
         }
 
+
+        // Scroll Speed JS
+        function init(){
+          new SmoothScroll(document,120,12)
+        }
+        
+        function SmoothScroll(target, speed, smooth) {
+          if (target === document)
+            target = (document.scrollingElement 
+                      || document.documentElement 
+                      || document.body.parentNode 
+                      || document.body) // cross browser support for document scrolling
+              
+          var moving = false
+          var pos = target.scrollTop
+          var frame = target === document.body 
+                      && document.documentElement 
+                      ? document.documentElement 
+                      : target // safari is the new IE
+          
+          target.addEventListener('mousewheel', scrolled, { passive: false })
+          target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
+        
+          function scrolled(e) {
+            e.preventDefault(); // disable default scrolling
+        
+            var delta = normalizeWheelDelta(e)
+        
+            pos += -delta * speed
+            pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
+        
+            if (!moving) update()
+          }
+        
+          function normalizeWheelDelta(e){
+            if(e.detail){
+              if(e.wheelDelta)
+                return e.wheelDelta/e.detail/40 * (e.detail>0 ? 1 : -1) // Opera
+              else
+                return -e.detail/3 // Firefox
+            }else
+              return e.wheelDelta/120 // IE,Safari,Chrome
+          }
+        
+          function update() {
+            moving = true
+            
+            var delta = (pos - target.scrollTop) / smooth
+            
+            target.scrollTop += delta
+            
+            if (Math.abs(delta) > 0.5)
+              requestFrame(update)
+            else
+              moving = false
+          }
+        
+          var requestFrame = function() { // requestAnimationFrame cross browser
+            return (
+              window.requestAnimationFrame ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame ||
+              window.oRequestAnimationFrame ||
+              window.msRequestAnimationFrame ||
+              function(func) {
+                window.setTimeout(func, 1000 / 50);
+              }
+            );
+          }()
+        }
+
+        new SmoothScroll(document,80,12)
 
         `}</Script>
     </>
