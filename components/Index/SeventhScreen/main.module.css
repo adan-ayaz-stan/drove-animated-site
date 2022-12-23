@@ -1,5 +1,6 @@
 .main {
-  position: relative;
+  height: 100vh;
+  width: 100vw;
+
   background-color: var(--background-color);
-  transition: all ease 0.7s;
 }

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Daikon Bold';
+  font-family: "Daikon Bold";
   src: url(../cms/fonts/Daikon/Daikon-Bold.ttf);
 }
 
@@ -14,13 +14,24 @@
 }
 
 @font-face {
-  font-family: 'Daikon Light';
+  font-family: "Daikon Light";
   src: url(../cms/fonts/Daikon/Daikon-Light.ttf);
+}
+
+@font-face {
+  font-family: "Daikon Light Italic";
+  src: url(../cms/fonts/Daikon/Daikon-LightItalic.ttf);
 }
 
 @font-face {
   font-family: "URW Geometric SemiBold";
   src: url(../cms/fonts/URW\ Geometric/URWGeometricSemiBold.otf);
+}
+
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --secondary-background-color: rgb(22, 22, 22);
 }
 
 html,
@@ -29,6 +40,21 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+[data-theme="light"] {
+  --background-color: #fff;
+  --text-color: #000;
+  --secondary-background-color: rgb(221, 221, 221);
+}
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #fff;
+  --secondary-background-color: rgb(22, 22, 22);
 }
 
 a {
@@ -42,7 +68,7 @@ a {
 .active-thumb {
   left: 0px;
 }
-/* 
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -51,4 +77,4 @@ a {
     color: white;
     background: black;
   }
-} */
+}

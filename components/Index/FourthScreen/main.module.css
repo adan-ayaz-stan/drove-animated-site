@@ -9,11 +9,9 @@
 
   overflow: hidden;
 
-  background-color: black;
+  background-color: var(--background-color);
 
   padding: 0 10%;
-
-  z-index: -10;
 }
 
 .bg {
@@ -29,7 +27,7 @@
 
   pointer-events: none;
 
-  z-index: -5;
+  z-index: 5;
 }
 
 .banner {

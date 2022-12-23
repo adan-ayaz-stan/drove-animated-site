@@ -57,7 +57,15 @@ export default function ImageSlider() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className={styles.main}>
+    <motion.div
+      className={styles.main}
+      whileInView={() => {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }}
+      viewport={{
+        amount: 0.5,
+      }}
+    >
       <div style={{ position: "absolute", top: "0", left: "0", width: "100%" }}>
         <Navbar />
       </div>
@@ -146,7 +154,8 @@ export default function ImageSlider() {
                               type: "spring",
                               duration: 0.7,
                             },
-                          }}viewport={{ once: true }}
+                          }}
+                          viewport={{ once: true }}
                           key={i * Math.random() * 2.54}
                         >
                           {ele}
@@ -243,6 +252,6 @@ export default function ImageSlider() {
       </div>
 
       <SocialsLink />
-    </div>
+    </motion.div>
   );
 }

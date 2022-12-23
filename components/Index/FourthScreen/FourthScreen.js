@@ -1,16 +1,36 @@
 import Image from "next/image";
-import { motion, useScroll } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useScroll,
+  useSpring,
+  useTransform,
+  useViewportScroll,
+} from "framer-motion";
 
 import { AiFillRightCircle } from "react-icons/ai/index";
 
 import styles from "./main.module.css";
+import { useEffect, useRef, useState } from "react";
 
 export default function FourthScreen() {
-  const { scrollYProgress } = useScroll();
+  const [progress, setProgress] = useState(0);
+
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+
+  useEffect(() => {
+    scrollYProgress.onChange((y) => {
+      setProgress(y);
+    });
+  }, []);
 
   return (
-    <div className={styles.main}>
-      <motion.div className={styles.bg} style={{ scale: scrollYProgress }}>
+    <div className={styles.main} ref={ref}>
+      <motion.div className={styles.bg} style={{ scale: 1.9 - +progress }}>
         <Image
           src={
             "https://images.pexels.com/photos/333513/pexels-photo-333513.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1"

@@ -1,13 +1,15 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import Navbar from "../components/Index/Navbar/Navbar";
-import styles from "../styles/Home.module.css";
+
 import Curtains from "../components/Layout/Curtains/Curtains";
-import ImageSlider from "../components/Index/ImageSlider/ImageSlider";
 import SecondScreen from "../components/Index/SecondScreen/SecondScreen";
 import ThirdScreen from "../components/Index/ThirdScreen/ThirdScreen";
 import FourthScreen from "../components/Index/FourthScreen/FourthScreen";
 import FifthScreen from "../components/Index/FifthScreen/FifthScreen";
+import SixthScreen from "../components/Index/SixthScreen/SixthScreen";
+import SeventhScreen from "../components/Index/SeventhScreen/SeventhScreen";
+
+import styles from "../styles/Home.module.css";
 
 const AnimCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -67,6 +69,8 @@ export default function Home() {
         <ThirdScreen />
         <FourthScreen />
         <FifthScreen />
+        <SixthScreen />
+        <SeventhScreen />
       </div>
     </>
   );

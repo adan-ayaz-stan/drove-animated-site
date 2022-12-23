@@ -69,7 +69,15 @@ export default function FifthScreen() {
   };
 
   return (
-    <div className={styles.main}>
+    <motion.div
+      whileInView={() => {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }}
+      viewport={{
+        amount: 0.5,
+      }}
+      className={styles.main}
+    >
       <motion.div
         className={styles.headings}
         initial={{
@@ -144,6 +152,6 @@ export default function FifthScreen() {
         className={styles.pagination}
         id="fifth-screen-slider-pagination"
       ></div>
-    </div>
+    </motion.div>
   );
 }

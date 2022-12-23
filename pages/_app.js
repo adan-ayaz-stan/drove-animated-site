@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
+import { ParallaxProvider } from "react-scroll-parallax";
 import { RecoilRoot } from "recoil";
 import "../styles/globals.css";
 
@@ -101,9 +102,11 @@ function MyApp({ Component, pageProps }) {
           </h1>
         </div>
       </div>
-      <RecoilRoot>
-        <Component {...pageProps} />
-      </RecoilRoot>
+      <ParallaxProvider>
+        <RecoilRoot>
+          <Component {...pageProps} />
+        </RecoilRoot>
+      </ParallaxProvider>
       <Script strategy="beforeInteractive">{`
         
         document.onreadystatechange = function() {

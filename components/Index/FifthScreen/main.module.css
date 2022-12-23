@@ -7,7 +7,8 @@
   width: 100vw;
 
   color: white;
-  background-color: #000;
+  background-color: var(--background-color);
+  transition: all ease 0.7s;
 }
 
 .small_heading {
@@ -92,7 +93,7 @@
   position: relative;
   height: 10px;
   width: 15px;
-  background-color: black;
+  background-color: var(--background-color);
 
   transition: all ease 0.4s;
 }
@@ -107,7 +108,7 @@
   height: 2px;
   width: 100%;
 
-  background-color: white;
+  background-color: var(--text-color);
 }
 
 .bullet_active {
