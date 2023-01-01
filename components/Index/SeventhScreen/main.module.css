@@ -1,6 +1,116 @@
 .main {
-  height: 100vh;
+  position: relative;
+
+  height: fit-content;
   width: 100vw;
 
   background-color: var(--background-color);
+  color: var(--text-color);
+
+  padding: 50px 0;
+}
+
+.comment_container {
+  position: relative;
+
+  display: flex;
+
+  width: 80%;
+
+  background-color: var(--secondary-background-color);
+
+  margin: 0 auto;
+  padding: 12px 24px;
+}
+
+.comment_container h1 {
+  position: relative;
+  top: -80px;
+
+  font-family: "Daikon Bold";
+  font-size: 2.2rem;
+  color: #313131;
+}
+
+.commas {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  line-height: 50px;
+  font-size: 7em;
+  font-family: "URW Geometric SemiBold";
+}
+
+.slider_container {
+  width: 60%;
+}
+
+.slide {
+  padding: 15px 25px;
+  background-color: var(--secondary-background-color);
+}
+
+.comment {
+  font-size: 1.15em;
+  font-family: "Daikon Medium Italic";
+  color: rgb(54, 54, 54);
+  line-height: 1.5em;
+
+  margin-bottom: 50px;
+}
+
+.comment_author {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment_author p {
+  font-size: 1.1em;
+  font-family: "Daikon Medium";
+}
+
+.comment_author img {
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.pagination {
+  width: fit-content;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 5px;
+
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.bullet {
+  position: relative;
+  height: 10px;
+  width: 15px;
+  background-color: var(--secondary-background-color);
+
+  transition: all ease 0.4s;
+}
+.bullet::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 2px;
+  width: 100%;
+
+  background-color: var(--text-color);
+}
+
+.bullet_active {
+  width: 40px;
 }
