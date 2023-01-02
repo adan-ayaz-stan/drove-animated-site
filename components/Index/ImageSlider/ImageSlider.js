@@ -21,18 +21,33 @@ import Navbar from "../Navbar/Navbar";
 const sampleArray = [
   {
     img: "https://images.pexels.com/photos/12686499/pexels-photo-12686499.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    description:
+      "Sometimes, we need to check the time, wondering when our work or meeting will finish, without getting caught by others.",
+    title: "Time Tag Watch",
   },
   {
-    img: "https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    img: "https://images.pexels.com/photos/6166175/pexels-photo-6166175.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    description:
+      "Cal was first. The first public university in the great state of California. They are the pioneers. They are the trailblazers who started it all.",
+    title: "Under Armour",
   },
   {
-    img: "https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    img: "https://images.pexels.com/photos/7209315/pexels-photo-7209315.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    description:
+      "Once the brand strategy was sharp and real for everyone inside of the company, all the brand behavior started to roll out as stationary material. ",
+    title: "Re Styling",
   },
   {
-    img: "https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    img: "https://images.pexels.com/photos/8921288/pexels-photo-8921288.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    description:
+      "We are thrilled to share our new reel with you all! Special thanks to all of our talented friends.",
+    title: "Toast 2019 Reel",
   },
   {
-    img: "https://images.pexels.com/photos/236915/pexels-photo-236915.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    img: "https://images.pexels.com/photos/13919730/pexels-photo-13919730.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    description:
+      "Striking and powerful Aston Martin Vantage captivates you at the first sight.",
+    title: "Sleep Walker",
   },
 ];
 const thumbArray = [
@@ -105,8 +120,7 @@ export default function ImageSlider() {
           01
         </h1>
         {sampleArray.map((ele, ind) => {
-          const h1str = "Time Tag Watch";
-          const strArray = h1str.split("");
+          const strArray = ele.title.split("");
 
           return (
             <SwiperSlide
@@ -164,11 +178,7 @@ export default function ImageSlider() {
                     })}
                   </h1>
 
-                  <p>
-                    Sometimes, we need to check the time, wondering when our
-                    work or meeting will finish, without getting caught by
-                    others.
-                  </p>
+                  <p>{ele.description}</p>
 
                   <a href="/">
                     {" "}
