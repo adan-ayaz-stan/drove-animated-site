@@ -25,7 +25,7 @@
     flex-flow: column;
     gap: 0;
 
-    background: var(--secondary-background-color);
+    background: var(--background-color);
 
     padding: 5% 0;
   }
