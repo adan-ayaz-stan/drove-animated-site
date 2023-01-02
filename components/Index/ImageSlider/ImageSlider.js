@@ -20,7 +20,7 @@ import Navbar from "../Navbar/Navbar";
 
 const sampleArray = [
   {
-    img: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
+    img: "https://images.pexels.com/photos/12686499/pexels-photo-12686499.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",
   },
   {
     img: "https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1",

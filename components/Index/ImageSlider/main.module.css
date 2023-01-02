@@ -113,6 +113,15 @@
   -webkit-text-stroke: rgb(31, 30, 30) 1px;
 }
 
+@media only screen and (max-width: 660px) {
+  .slide_number {
+    bottom: 5%;
+
+    color: rgba(53, 53, 53, 0.644);
+  -webkit-text-stroke: rgb(7, 7, 7) 1px;
+  }
+}
+
 .current_slide_and_thumb_slider {
   display: flex;
   flex-flow: row nowrap;
@@ -180,6 +189,12 @@
   bottom: 10%;
 
   z-index: 1;
+}
+
+@media only screen and (max-width: 660px) {
+  .navigation {
+    bottom: 5%;
+  }
 }
 
 .nav_prev,
