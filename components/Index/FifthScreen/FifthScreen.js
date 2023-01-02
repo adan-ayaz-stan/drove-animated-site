@@ -122,6 +122,17 @@ export default function FifthScreen() {
         }}
         loop={true}
         initialSlide={3}
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 100,
+          },
+        }}
       >
         {sampleData.map((ele, ind) => {
           return (

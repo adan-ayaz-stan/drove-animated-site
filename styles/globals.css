@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: "Daikon Medium Italic";
+  src: url(../cms/fonts/Daikon/Daikon-MediumItalic.ttf);
+}
+
+@font-face {
   font-family: "Daikon Light";
   src: url(../cms/fonts/Daikon/Daikon-Light.ttf);
 }

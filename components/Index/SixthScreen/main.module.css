@@ -19,6 +19,18 @@
   transition: all ease 0.7s;
 }
 
+@media only screen and (max-width: 660px) {
+  .main {
+    height: fit-content;
+    flex-flow: column;
+    gap: 0;
+
+    background: var(--secondary-background-color);
+
+    padding: 5% 0;
+  }
+}
+
 .image,
 .content {
   display: flex;
@@ -31,16 +43,32 @@
   height: 100%;
 }
 
+@media only screen and (max-width: 660px) {
+  .image,
+  .content {
+    width: 100%;
+  }
+}
+
 .image {
+  margin-top: -500px;
+  min-height: 1000px;
   overflow: hidden;
 }
 
 .image img {
+  min-height: 500px;
   object-fit: cover;
 }
 
 .content {
   color: var(--text-color);
+}
+
+@media only screen and (max-width: 660px) {
+  .content {
+    padding: 10%;
+  }
 }
 
 .content h1 {

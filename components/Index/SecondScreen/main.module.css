@@ -7,6 +7,12 @@
   padding: 50px 0;
 }
 
+@media only screen and (max-width: 660px) {
+  .main {
+    height: fit-content;
+  }
+}
+
 .heading {
   opacity: 0;
   margin: 0 auto;
@@ -15,6 +21,12 @@
   font-family: "URW Geometric SemiBold";
   font-size: 3em;
   text-align: center;
+}
+
+@media only screen and (max-width: 660px) {
+  .heading {
+    padding: 10px 20px;
+  }
 }
 
 .container {
@@ -27,6 +39,13 @@
   color: white;
 }
 
+@media only screen and (max-width: 660px) {
+  .container {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
 .text_content {
   display: flex;
   flex-flow: column nowrap;
@@ -36,6 +55,11 @@
   padding: 30px 20%;
 }
 
+@media only screen and (max-width: 660px) {
+  .text_content {
+    text-align: center;
+  }
+}
 .text_content p {
   color: rgb(163, 163, 163);
   font-size: 1.2em;
@@ -59,6 +83,11 @@
 
   padding: 10px 0;
 }
+@media only screen and (max-width: 660px) {
+  .designer_name {
+    flex-flow: column;
+  }
+}
 
 .designer_name div {
   height: 1px;
@@ -77,10 +106,31 @@
   font-size: 1.4em;
   font-family: "Daikon Bold";
 }
+@media only screen and (max-width: 660px) {
+  .experience {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .experience span:first-child {
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+  }
+}
 
 .image_content {
   padding: 10%;
   background-color: rgb(27, 27, 27);
+}
+
+@media only screen and (max-width: 660px) {
+  .image_content {
+    display: none;
+  }
 }
 
 .image_container {

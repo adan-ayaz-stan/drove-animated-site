@@ -21,11 +21,11 @@ export default function SecondScreen() {
         whileInView={{
           opacity: 1,
           transition: {
-            delay: 0.5,
+            delay: 0.8,
             duration: 0.4,
           },
         }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         className={styles.heading}
       >
         Hello, we are Drove Drive
@@ -33,7 +33,7 @@ export default function SecondScreen() {
 
       <div className={styles.container}>
         <div className={styles.text_content}>
-          <p>
+          <motion.p>
             {`It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.`
               .split(" ")
               .map((ele, ind) => {
@@ -44,7 +44,7 @@ export default function SecondScreen() {
                       opacity: 1,
                       top: "0px",
                       transition: {
-                        delay: ind * 0.03 + 0.8,
+                        delay: ind * 0.03 + 1.2,
                         duration: 0.1,
                       },
                     }}
@@ -52,7 +52,7 @@ export default function SecondScreen() {
                   >{` ${ele}`}</motion.span>
                 );
               })}
-          </p>
+          </motion.p>
 
           <div
             className={`${styles.designer_name} link`}

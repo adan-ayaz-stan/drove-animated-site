@@ -12,6 +12,12 @@
   padding: 0 10%;
 }
 
+@media only screen and (max-width: 660px) {
+  .main {
+    height: fit-content;
+  }
+}
+
 .small_heading {
   display: flex;
   align-items: center;
@@ -35,6 +41,16 @@
   gap: 30px;
 
   padding: 10px 50px;
+}
+
+@media only screen and (max-width: 660px) {
+  .cards_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr);
+    gap: 10px;
+
+    padding: 10px 0;
+  }
 }
 
 .card {
