@@ -51,13 +51,21 @@
 }
 
 .image {
-  margin-top: -500px;
-  min-height: 1000px;
   overflow: hidden;
 }
 
+@media only screen and (max-width: 660px) {
+  .image {
+    margin-top: -500px;
+    min-height: 1000px;
+  }
+
+  .image img {
+    min-height: 500px;
+  }
+}
+
 .image img {
-  min-height: 500px;
   object-fit: cover;
 }
 
