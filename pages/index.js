@@ -10,6 +10,8 @@ import SixthScreen from "../components/Index/SixthScreen/SixthScreen";
 import SeventhScreen from "../components/Index/SeventhScreen/SeventhScreen";
 
 import styles from "../styles/Home.module.css";
+import EighthScreen from "../components/Index/EighthScreen/EighthScreen";
+import NinthScreen from "../components/Index/NinthScreen/NinthScreen";
 
 const AnimCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -71,6 +73,8 @@ export default function Home() {
         <FifthScreen />
         <SixthScreen />
         <SeventhScreen />
+        <EighthScreen />
+        <NinthScreen />
       </div>
     </>
   );

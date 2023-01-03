@@ -199,7 +199,7 @@ function MyApp({ Component, pageProps }) {
           }()
         }
 
-        new SmoothScroll(document,80,12)
+        new SmoothScroll(document,80,25)
 
         `}</Script>
     </>
