@@ -37,6 +37,7 @@
   --background-color: #fff;
   --text-color: #000;
   --secondary-background-color: rgb(22, 22, 22);
+  --secondary-text-color: #313131;
 }
 
 html,
@@ -55,11 +56,13 @@ body {
   --background-color: #fff;
   --text-color: #000;
   --secondary-background-color: rgb(221, 221, 221);
+  --secondary-text-color: #313131;
 }
 [data-theme="dark"] {
   --background-color: #000000;
   --text-color: #fff;
   --secondary-background-color: rgb(22, 22, 22);
+  --secondary-text-color: #d4d1d1;
 }
 
 a {

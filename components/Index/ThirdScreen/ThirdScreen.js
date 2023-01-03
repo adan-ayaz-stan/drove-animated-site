@@ -42,7 +42,8 @@ export default function ThirdScreen() {
             duration: 0.7,
             ease: "easeOut",
           },
-        }}viewport={{ once: true }}
+        }}
+        viewport={{ once: true }}
       >
         <h4 className={styles.small_heading}>
           {"•"}

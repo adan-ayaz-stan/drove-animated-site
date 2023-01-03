@@ -8,6 +8,8 @@
   color: var(--text-color);
 
   padding: 50px 0;
+
+  transition: all ease 0.7s;
 }
 
 .comment_container {
@@ -36,7 +38,7 @@
 
   font-family: "Daikon Bold";
   font-size: 2.2rem;
-  color: #313131;
+  color: var(--secondary-text-color);
 }
 
 @media only screen and (max-width: 660px) {
@@ -73,7 +75,7 @@
 .comment {
   font-size: 1.15em;
   font-family: "Daikon Medium Italic";
-  color: rgb(54, 54, 54);
+  color: var(--secondary-text-color);
   line-height: 1.5em;
 
   margin-bottom: 50px;
