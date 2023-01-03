@@ -1,0 +1,66 @@
+.main {
+  min-height: 100vh;
+  height: fit-content;
+
+  margin: 50px 0;
+}
+
+.small_heading {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 10px;
+
+  font-family: "Daikon Medium";
+  font-size: 1em;
+}
+
+.large_heading {
+  font-family: "URW Geometric SemiBold";
+  font-size: 2.5em;
+  margin: 15px 0;
+}
+
+.headings {
+  position: relative;
+  margin-left: 10%;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5px;
+
+  border: solid 1px white;
+
+  margin: 0 10%;
+}
+
+.brand {
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+
+.brand img {
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 50%;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+  background: rgba(19, 19, 19, 0.555);
+  z-index: 10;
+}
