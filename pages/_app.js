@@ -7,24 +7,6 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <style>
-          {`
-            
-            .splash-screen div h1 {
-              position: relative;
-              top: 0;
-              margin: 0;
-              color: #fff;
-              opacity: 1;
-              text-transform: uppercase;
-              font-family: 'URW Geometric SemiBold';
-              font-size: 4em;
-              transition: all ease-in 1s;
-            }
-          `}
-        </style>
-      </Head>
       <div
         style={{
           display: "grid",
@@ -108,25 +90,26 @@ function MyApp({ Component, pageProps }) {
         </RecoilRoot>
       </ParallaxProvider>
       <Script strategy="beforeInteractive">{`
-        
-        document.onreadystatechange = function() {
-          if (document.readyState == 'complete') {
-            setTimeout(() => {
-              document.getElementById('splash-screen-top-h1').style.top = '-20%';
-              document.getElementById('splash-screen-bottom-h1').style.top = '20%';
-              document.getElementById('splash-screen-top-h1').style.opacity = '0';
-              document.getElementById('splash-screen-bottom-h1').style.opacity = '0';
-              
+
+          document.onreadystatechange = function() {
+            if (document.readyState == 'complete') {
               setTimeout(() => {
-                document.getElementById('splash-screen-top').style.top = '-100%';
-                document.getElementById('splash-screen-bottom').style.top = '100%';
+                document.getElementById('splash-screen-top-h1').style.top = '-50%';
+                document.getElementById('splash-screen-bottom-h1').style.top = '50%';
+                document.getElementById('splash-screen-top-h1').style.opacity = '0';
+                document.getElementById('splash-screen-bottom-h1').style.opacity = '0';
+                
                 setTimeout(() => {
-                  document.getElementById('splash-screen').style.zIndex = '-100';
+                  document.getElementById('splash-screen-top').style.top = '-100%';
+                  document.getElementById('splash-screen-bottom').style.top = '100%';
+                  setTimeout(() => {
+                    document.getElementById('splash-screen').style.zIndex = '-100';
+                    document.getElementById('splash-screen').blur();
+                  }, 1000);
                 }, 1000);
               }, 1000);
-            }, 1000);
+            }
           }
-        }
 
 
         // Scroll Speed JS
@@ -200,7 +183,6 @@ function MyApp({ Component, pageProps }) {
         }
 
         new SmoothScroll(document,80,25)
-
         `}</Script>
     </>
   );

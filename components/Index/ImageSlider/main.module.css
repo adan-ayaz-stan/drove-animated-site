@@ -116,7 +116,7 @@
 @media only screen and (max-width: 660px) {
   .slide_number {
     font-size: 7em;
-    bottom: 5%;
+    bottom: 15%;
 
     color: rgba(53, 53, 53, 0.644);
     -webkit-text-stroke: rgb(7, 7, 7) 1px;
@@ -194,7 +194,7 @@
 
 @media only screen and (max-width: 660px) {
   .navigation {
-    bottom: 5%;
+    bottom: 15%;
   }
 }
 

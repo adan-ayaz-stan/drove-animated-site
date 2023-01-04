@@ -33,34 +33,12 @@
   grid-template-rows: 1fr 1fr 1fr;
   gap: 5px;
 
-  border: solid 1px white;
-
   margin: 0 10%;
 }
 
-.brand {
-  position: relative;
-  height: 200px;
-  width: 100%;
-}
-
-.brand img {
-  object-fit: cover;
-}
-
-.content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  height: 50%;
-  width: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-
-  background: rgba(19, 19, 19, 0.555);
-  z-index: 10;
+@media only screen and (max-width: 660px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }

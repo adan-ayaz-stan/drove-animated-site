@@ -12,6 +12,7 @@ import SeventhScreen from "../components/Index/SeventhScreen/SeventhScreen";
 import styles from "../styles/Home.module.css";
 import EighthScreen from "../components/Index/EighthScreen/EighthScreen";
 import NinthScreen from "../components/Index/NinthScreen/NinthScreen";
+import Footer from "../components/Index/Footer/Footer";
 
 const AnimCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -60,6 +61,7 @@ export default function Home() {
             "textarea",
             "button",
             ".link",
+            ".imp",
           ]}
         />
 
@@ -67,14 +69,19 @@ export default function Home() {
         <Curtains />
 
         <ImgSlider />
-        <SecondScreen />
+
+        {/* SO WHY ARE THESE COMMENTED OUT? BECAUSE THE IMAGE SLIDER CAN'T STOP PLAYIN' "I AM TOO OLD FOR THIS SHIT" SO I HAD TO IMPORT THE OTHERS INTO THE IMAGE SLIDER SO THEY RENDER AT THE SAME TIME. EVEN MY GRANDMA CAN RENDER FASTER THAN IT!!! */}
+        
+        {/* <SecondScreen />
         <ThirdScreen />
         <FourthScreen />
         <FifthScreen />
         <SixthScreen />
         <SeventhScreen />
         <EighthScreen />
-        <NinthScreen />
+        <NinthScreen /> */}
+
+        {/* <Footer /> */}
       </div>
     </>
   );

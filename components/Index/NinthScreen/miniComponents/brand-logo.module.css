@@ -1,0 +1,37 @@
+.brand {
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+
+.brand img {
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 50%;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+  background: rgba(19, 19, 19, 0.781);
+  z-index: 10;
+}
+
+@media only screen and (max-width: 660px) {
+  .content {
+    display: none;
+  }
+}
+
+.name_and_link {
+  font-family: "Daikon Bold";
+  text-align: center;
+}
