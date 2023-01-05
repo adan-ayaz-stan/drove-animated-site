@@ -129,6 +129,11 @@ export default function FifthScreen() {
             spaceBetween: 20,
           },
           640: {
+            slidesPerView: 1.75,
+            spaceBetween: 20,
+            centeredSlides: true,
+          },
+          1012: {
             slidesPerView: 3,
             spaceBetween: 100,
           },

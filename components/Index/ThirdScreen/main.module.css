@@ -18,6 +18,14 @@
   }
 }
 
+@media only screen and (max-width: 980px) {
+  .main {
+    height: fit-content;
+    padding: 100px 10%;
+    padding-top: 50px;
+  }
+}
+
 .small_heading {
   display: flex;
   align-items: center;
@@ -44,6 +52,16 @@
 }
 
 @media only screen and (max-width: 660px) {
+  .cards_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr);
+    gap: 10px;
+
+    padding: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 980px) {
   .cards_container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(1fr);

@@ -13,6 +13,12 @@
   }
 }
 
+@media only screen and (max-width: 980px) {
+  .main {
+    height: fit-content;
+  }
+}
+
 .heading {
   opacity: 0;
   margin: 0 auto;
@@ -40,6 +46,13 @@
 }
 
 @media only screen and (max-width: 660px) {
+  .container {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+@media only screen and (max-width: 980px) {
   .container {
     display: flex;
     flex-flow: column;
@@ -88,7 +101,6 @@
     flex-flow: column;
   }
 }
-
 .designer_name div {
   height: 1px;
   width: 100px;
@@ -118,6 +130,7 @@
   .experience span:first-child {
     padding: 0;
     margin: 0;
+    margin-top: 20px;
     line-height: 30px;
   }
 }
@@ -130,6 +143,13 @@
 @media only screen and (max-width: 660px) {
   .image_content {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .image_content {
+    height: 500px;
+    padding: 0;
   }
 }
 

@@ -30,7 +30,7 @@ export default function FourthScreen() {
 
   return (
     <div className={styles.main} ref={ref}>
-      <motion.div className={styles.bg} style={{ scale: 1.9 - +progress }}>
+      <motion.div className={styles.bg} style={{ scale: 2.0 - +progress }}>
         <Image
           src={
             "https://images.pexels.com/photos/333513/pexels-photo-333513.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1"

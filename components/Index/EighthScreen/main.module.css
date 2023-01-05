@@ -7,6 +7,13 @@
   transition: all ease 0.7s;
 }
 
+@media only screen and (max-width: 980px) {
+  .main {
+    min-height: fit-content;
+    padding: 50px 0;
+  }
+}
+
 .small_heading {
   display: flex;
   align-items: center;

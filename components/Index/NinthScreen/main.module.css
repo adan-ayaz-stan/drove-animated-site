@@ -5,6 +5,12 @@
   margin: 50px 0;
 }
 
+@media only screen and (max-width: 980px) {
+  .main {
+    min-height: fit-content;
+  }
+}
+
 .small_heading {
   display: flex;
   flex-flow: row;

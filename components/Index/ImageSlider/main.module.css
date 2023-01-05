@@ -75,6 +75,11 @@
   margin: 10px;
   margin-left: 30px;
 }
+@media only screen and (max-width: 660px) {
+  .slide_content h1 {
+    font-size: 2.5em;
+  }
+}
 
 .slide_content p {
   margin: 20px;

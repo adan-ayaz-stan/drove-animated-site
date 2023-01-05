@@ -80,6 +80,10 @@ export default function EighthScreen() {
               spaceBetween: 20,
             },
             640: {
+              slidesPerView: 1.75,
+              spaceBetween: 50,
+            },
+            1012: {
               slidesPerView: 2.5,
               spaceBetween: 50,
             },

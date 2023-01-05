@@ -33,6 +33,11 @@
   src: url(../cms/fonts/URW\ Geometric/URWGeometricSemiBold.otf);
 }
 
+@font-face {
+  font-family: "URW Geometric Bold";
+  src: url(../cms/fonts/URW\ Geometric/URWGeometricBold.otf);
+}
+
 :root {
   --background-color: #fff;
   --text-color: #000;
@@ -46,6 +51,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 14px;
 }
 body {
   background-color: var(--background-color);
@@ -73,6 +79,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
 .active-thumb {
   left: 0px;
 }

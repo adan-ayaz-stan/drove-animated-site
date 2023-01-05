@@ -21,11 +21,11 @@ export default function SecondScreen() {
         whileInView={{
           opacity: 1,
           transition: {
-            delay: 0.8,
+            delay: 0.5,
             duration: 0.4,
           },
         }}
-        // viewport={{ once: true }}
+        viewport={{ once: true }}
         className={styles.heading}
       >
         Hello, we are Drove Drive
@@ -44,7 +44,7 @@ export default function SecondScreen() {
                       opacity: 1,
                       top: "0px",
                       transition: {
-                        delay: ind * 0.03 + 1.2,
+                        delay: ind * 0.02 + 1.2,
                         duration: 0.1,
                       },
                     }}
@@ -95,7 +95,7 @@ export default function SecondScreen() {
                 opacity: 1,
                 top: "0px",
                 transition: {
-                  delay: 0.3,
+                  delay: 1.3,
                   duration: 0.4,
                 },
               }}
@@ -118,7 +118,7 @@ export default function SecondScreen() {
                 opacity: 1,
                 top: "0px",
                 transition: {
-                  delay: 0.6,
+                  delay: 1.6,
                   duration: 0.4,
                 },
               }}
@@ -136,6 +136,7 @@ export default function SecondScreen() {
                 'url("https://images.pexels.com/photos/1419923/pexels-photo-1419923.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1")',
               backgroundPosition: "center",
               backgroundSize: "100%",
+              backgroundRepeat: "no-repeat",
             }}
             id="second-screen-image"
           >

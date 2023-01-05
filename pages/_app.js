@@ -94,8 +94,7 @@ function MyApp({ Component, pageProps }) {
           document.onreadystatechange = function() {
             if (document.readyState == 'complete') {
               setTimeout(() => {
-                document.getElementById('splash-screen-top-h1').style.top = '-50%';
-                document.getElementById('splash-screen-bottom-h1').style.top = '50%';
+                
                 document.getElementById('splash-screen-top-h1').style.opacity = '0';
                 document.getElementById('splash-screen-bottom-h1').style.opacity = '0';
                 
@@ -104,7 +103,6 @@ function MyApp({ Component, pageProps }) {
                   document.getElementById('splash-screen-bottom').style.top = '100%';
                   setTimeout(() => {
                     document.getElementById('splash-screen').style.zIndex = '-100';
-                    document.getElementById('splash-screen').blur();
                   }, 1000);
                 }, 1000);
               }, 1000);
